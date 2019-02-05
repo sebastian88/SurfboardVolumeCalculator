@@ -1,19 +1,54 @@
 <html>
-    <head>
-    </head>
-    <body>
-        <label for="weight">Weight</label>
-        <input type="number" id="weight" name="weight" />
-        
-        <input type="radio" name="level" id="level-one" value="1"> <label for="level-one">Level 1</label>
-        <input type="radio" name="level" id="level-two" value="2"> <label for="level-two">Level 2</label>
-        <input type="radio" name="level" id="level-three" value="3"> <label for="level-three">Level 3</label>
-        <input type="radio" name="level" id="level-four" value="4"> <label for="level-four">Level 4</label>
 
-        <button class="js-button">Calculate</button>
+<head>
 
-        <div class="js-result"></div>
-        <script src="js/Index.js"></script>
-        <script src="js/SurfboardVolumeCalculation.js"></script>
-    </body>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Surfboard Volume Calculator</h1>
+        <p></p>
+    </div>
+    <form>
+        <div class="input">
+            <label class="line-label" for="weight">Your Weight (kg)</label>
+            <input type="number" id="weight" name="weight" required />
+        </div>
+        <div class="input" >
+            <label for="level" class="line-label">Your Ability</label>
+            <p>Using the <a href="https://surfsimply.com/what-level-surfer-are-you/" target="blank">Surf Simple</a>
+                ability scale</p>
+            <div class="level-radio">
+                <input class="checkmark" type="radio" name="level" id="level-one" value="1" required="required">
+                <label for="level-one">Level 1 <span>In the white water</span></label>
+            </div>
+            <div class="level-radio">
+                <input type="radio" name="level" id="level-two" value="2" required="required">
+                <label for="level-two">Level 2 <span>Outback catching unbroken waves</span></label>
+            </div>
+            <div class="level-radio">
+                <input type="radio" name="level" id="level-three" value="3" required="required">
+                <label for="level-three">Level 3 <span>Consistently catching head high waves</span></label>
+            </div>
+            <div class="level-radio">
+                <input type="radio" name="level" id="level-four" value="4" required="required">
+                <label for="level-four">Level 4 <span>Performing committed maneuvers</span></label>
+            </div>
+        </div>
+        <div>
+            <button class="js-button">Calculate</button>
+        </div>
+    </form>
+
+    <div class="js-result"></div>
+    <script src="js/Index.js"></script>
+    <script src="js/SurfboardVolumeCalculation.js"></script>
+</body>
+
 </html>

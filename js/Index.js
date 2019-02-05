@@ -3,11 +3,12 @@ var Index = /** @class */ (function () {
     }
     Index.main = function () {
         var button = document.getElementsByClassName("js-button")[0];
-        button.addEventListener("click", function () {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
             var level = +document.querySelector('input[name="level"]:checked').value;
             var weight = +document.querySelector('input[name="weight"]').value;
             var result = document.getElementsByClassName("js-result")[0];
-            result.innerHTML = String(new SurfboardVolumnCalculation(weight, level).Volume() + " litres");
+            result.innerHTML = String(new SurfboardVolumnCalculation(weight, level).Volume() + " litres minimum");
         });
     };
     return Index;

@@ -1,0 +1,78 @@
+h1 {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-size: 4em;
+    margin-bottom:20px;
+    color:white;
+}
+
+.header {
+    background-color: #008ae1
+}
+
+* {
+    font-family: 'Inconsolata', monospace;
+    border: none;
+    padding:0;
+    margin:0;
+    background: none;
+    font-weight: 500;
+}
+input {
+    border: black solid 1px;
+    font-size: 1.5em;
+}
+label {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.line-label{
+    display:block;
+    text-align: center;
+}
+
+.input {
+    margin-bottom: 20px;
+    
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+input[type='radio']{
+    cursor: pointer;
+}
+
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
